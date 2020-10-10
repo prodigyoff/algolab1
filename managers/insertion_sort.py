@@ -11,7 +11,7 @@ class InsertionSort:
         for i in indexing_range:
             element_to_sort = given_list[i]
 
-            while key(given_list[i - 1]) > key(element_to_sort) and i > 0:
+            while key(given_list[i - 1]) < key(element_to_sort) and i > 0:
                 self.comparsion_counter += 2
                 utilities.swap(given_list, i, i - 1)
                 self.swap_counter += 1

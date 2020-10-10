@@ -18,14 +18,14 @@ if __name__ == '__main__':
 
         insertion = insertion_sort.InsertionSort()
         insertion_start_time = time.process_time()
-        insertion.sort(juice_squeezers_list, key=lambda juice_squeezer: juice_squeezer.consumed_power_in_kilowats)
+        insertion.sort(juice_squeezers_list, key=lambda juice_squeezer: juice_squeezer.max_amount_of_squeezed_juice_in_litres_per_hour)
         insertion_end_time = time.process_time()
         print(f'INSERTION SORT \n Sorted list: \n{juice_squeezers_list} \n')
 
         heap = heap_sort.HeapSort()
         heap_start_time = time.process_time()
         heap.sort(juice_squeezers_list,
-                  key=lambda juice_squeezer: juice_squeezer.max_amount_of_squeezed_juice_in_litres_per_hour)
+                  key=lambda juice_squeezer: juice_squeezer.consumed_power_in_kilowats)
         heap_end_time = time.process_time()
         print(f'HEAPSORT \n Sorted list: \n{juice_squeezers_list} \n')
 
