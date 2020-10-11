@@ -14,12 +14,10 @@ class HeapSort:
         self.comparsion_counter += 2
         if left_element < heap_size and key(given_list[largest_element]) < key(given_list[left_element]):
             largest_element = left_element
-            self.swap_counter += 1
 
         self.comparsion_counter += 2
         if right_element < heap_size and key(given_list[largest_element]) < key(given_list[right_element]):
             largest_element = right_element
-            self.swap_counter += 1
 
         self.comparsion_counter += 1
         if largest_element != root_index:
